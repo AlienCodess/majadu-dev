@@ -1,5 +1,6 @@
 /* # is for id . is for class  */
 
 #test{
-    size: 200px;
+    height: 200px;
+    width: 300px;
 }
