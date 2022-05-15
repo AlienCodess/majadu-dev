@@ -49,10 +49,6 @@ let user = {
 
 };
 
-function saveData(item,value){
-            localStorage.setItem(item,value);
-}
-
 /** SET UP TITLE **/
 title = "Majadu";
 subtitle = document.querySelector("h1").innerHTML;
