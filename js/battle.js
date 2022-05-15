@@ -30,6 +30,7 @@ let enemy = {
     "hp": 100,
 }
 
+let turn = true;
 
 const enemy_hp = document.querySelector('#enemyHealth');
 localStorage.setItem("hp", "200");
@@ -39,35 +40,53 @@ const avatar = document.querySelector('.avatar');
 const hp = document.querySelector('#hp');
 const mp = document.querySelector('#mp');
 const attacks = document.querySelectorAll('.attack');
-let Turn = true;
+const start_lvl = 1
+localStorage.setItem("level", start_lvl);
+
+function enemy_attack() {
+    enemy_damage_handler(enemy.damage)
+}
+function player_attack(y) { 
+    player_damage_handler(attack[y].attack,attack[y].mp_cost);
+}
+
+
 for (let x = 0; x < attacks.length; x++) {
     attacks[x].innerHTML = attack[x].name;
+    attacks[x].onclick = () => {
+        if (turn !== true) {
+            enemy_attack();
+            turn = true;
+        } else if (turn !== false) {
+            player_attack(x);
+            turn = false;
+        }
+
+
+    };
 }
-function changeTurn() {
-    Turn = !Turn;
-    return Turn;
-}
+
 
 /** ##  START SCRIPT ## **/
 
-function damage_handler(damage, consumption) {
-    if (enemy.hp <= 0) {
-        /** ##  START new enemy spawn ## **/
+function player_damage_handler(damage, consumption){
+    if (hp.value<= 0 || enemy.hp <= 0|| mp.value <= 0)  {
+        /** ##  START new player spawn ## **/ 
     }
     else {
-        mp.value -= consumption;
+        console.log(damage)
         enemy.hp -= damage;
-        loadEnemy()
+        mp.value -= consumption;
+        loadEnemy();
     }
-};
+}
 function enemy_damage_handler(damage) {
-    if (hp.value <= 0) {
+    if (hp.value<= 0 || enemy.hp <= 0|| mp.value <= 0) {
         /** ##  START new enemy spawn ## **/
     }
     else {
         console.log("hit");
         hp.value -= damage;
-
     }
 };
 
@@ -89,19 +108,6 @@ function loadUser() {
     mp.max = JSON.parse(user.mp);
 }
 
-for (let x = 0; x < attacks.length; x++) {
-    if (changeTurn() === false) {
-        attacks[x].onclick = function attacks() {
-            damage_handler(attack[x].attack, attack[x].mp_cost);
-            this.Turn = changeTurn();
-            console.log(this.Turn);
-        };
-    } else if (attacks.Turn === true) {
-        console.log("hit");
-        enemy_damage_handler(15);
-        changeTurn();
-    }
-}
 
 
 loadEnemy();
