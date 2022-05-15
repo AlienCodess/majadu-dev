@@ -130,6 +130,9 @@ header{
 footer{
     margin: 25px 0;
 }
+#battleWindow{
+    margin:0;
+}
 #battleDiv{
     width: 650px;
     position: relative;
@@ -194,8 +197,8 @@ footer{
 }
 #battleNav button{
     background: rgba(105,105,105,0.8);
-    width:100%;
-    padding: 8px 5px;
+    width:158px;
+    padding: 8px 0;
     border: none;
 }
 #battleNav button:hover{
@@ -211,6 +214,7 @@ footer{
     border-left: none;
     border-radius: 0 3px 3px 0;
     width: 250px;
+    margin: 0;
 }
 #log{
     height: 442px;
