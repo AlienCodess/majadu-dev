@@ -1,4 +1,3 @@
-let title, subtitle;
 let user = {
     // user data
     "id": localStorage.getItem("id"),
@@ -51,8 +50,5 @@ let user = {
 };
 
 /** SET UP TITLE **/
-title = "Majadu";
-subtitle = document.querySelector("h1").innerHTML;
-document.title = `${title} - ${subtitle}`;
-
-alert("nigel ge stinkt")
+sub_title = document.querySelector("h1").innerHTML;
+document.title = `${site_title} - ${sub_title}`;
