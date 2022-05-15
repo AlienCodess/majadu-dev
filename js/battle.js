@@ -35,12 +35,14 @@ let turn = true;
 const enemy_hp = document.querySelector('#enemyHealth');
 localStorage.setItem("hp", "200");
 localStorage.setItem("maji", "200");
+localStorage.setItem("username", "steel");
 const username = document.querySelector('.username');
 const avatar = document.querySelector('.avatar');
 const hp = document.querySelector('#hp');
 const mp = document.querySelector('#mp');
 const attacks = document.querySelectorAll('.attack');
-const start_lvl = 1
+const start_lvl = 1;
+const log = document.querySelector("#log");
 localStorage.setItem("level", start_lvl);
 
 function enemy_attack() {
@@ -74,7 +76,7 @@ function player_damage_handler(damage, consumption){
         /** ##  START new player spawn ## **/ 
     }
     else {
-        console.log(damage)
+        log.innerHTML = "<p class='playerLog'>"+user.username +" hit with "+ damage+"</p>" + log.innerHTML
         enemy.hp -= damage;
         mp.value -= consumption;
         loadEnemy();
@@ -87,6 +89,8 @@ function enemy_damage_handler(damage) {
     else {
         console.log("hit");
         hp.value -= damage;
+        log.innerHTML = "<p class='enemyLog'>enemy hit</p>" + log.innerHTML
+
     }
 };
 
