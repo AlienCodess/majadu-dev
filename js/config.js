@@ -6,6 +6,7 @@ let user = {
     "password": localStorage.getItem("password"),
     "date": localStorage.getItem("date"),
     "token": localStorage.getItem("token"),
+    "update-version": localStorage.getItem("update-version"),
 
     //user info
     "status": localStorage.getItem("status"), //online, offline, banned
@@ -53,3 +54,5 @@ let user = {
 title = "Majadu";
 subtitle = document.querySelector("h1").innerHTML;
 document.title = `${title} - ${subtitle}`;
+
+alert("nigel ge stinkt")
