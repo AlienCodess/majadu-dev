@@ -1,11 +1,5 @@
 const site_title = "Majadu";
 let sub_title;
-
-
-/** FOOTER CONST **/
-const footer = document.querySelector("footer");
-
-
 /** HEADER CREATION **/
 function createHeader(){
     let header = document.querySelector("header");
