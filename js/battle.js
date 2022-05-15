@@ -1,4 +1,6 @@
-
+b_user = {
+    "username": user.username
+}
 function HP_handler(damage){
     user.current_HP -= damage;
     console.log(user.current_HP);
