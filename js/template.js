@@ -11,7 +11,7 @@ function createHeader(){
         "                <li><a class=\"text-decoration-none\" href=\"index.html\">Home</a></li>\n" +
         "                <li><a class=\"text-decoration-none\" href=\"info.html\">Informatie</a></li>\n" +
         "                <li><a class=\"text-decoration-none\" href=\"inloggen.html\">Inloggen</a></li>\n" +
-        "                <li><a class=\"text-decoration-none\" href=\"registreren.html\">Registreren</a></li>\n" +
+        "                <li><a class=\"text-decoration-none\" href=\"../registreren.html\">Registreren</a></li>\n" +
         "            </ul>"
 
     //header title
@@ -38,7 +38,7 @@ function createLeftnav(){
         "            <!-- GUEST -->\n" +
         "            <li><a class=\"text-decoration-none guest\" href=\"index.html\">Home</a></li>\n" +
         "            <li><a class=\"text-decoration-none guest\" href=\"inloggen.html\">Inloggen</a></li>\n" +
-        "            <li><a class=\"text-decoration-none guest\" href=\"registreren.html\">Registreren</a></li>\n" +
+        "            <li><a class=\"text-decoration-none guest\" href=\"../registreren.html\">Registreren</a></li>\n" +
         "\n" +
         "            <!-- MEMBER -->\n" +
         "            <li><a class=\"text-decoration-none member\" href=\"#\">Instellingen</a></li>\n" +
