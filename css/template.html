@@ -6,30 +6,26 @@
           name="viewport">
     <meta content="ie=edge" http-equiv="X-UA-Compatible">
     <link href="./css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <script src="./js/template.js"></script>
 
     <title></title>
 </head>
 <body>
 <!--HEADER-->
-<header>
-    <script>createHeader()</script>
-</header>
+<header x-data="header" x-html="html"></header>
 <!-- MAIN -->
 <main class="d-flex">
     <!-- LEFT NAVIGATION -->
-    <script>createLeftnav()</script>
+    <div x-data="main" x-html="left_nav"></div>
     <!-- CONTENT -->
-    <section class="content w-100">
-        <h1>PAGE TITLE</h1>
-
+    <section class="content">
+    <!-- INSERT CONTENT -->
     </section>
 </main>
 
 <!-- FOOTER -->
-<footer class="text-center">
-    <script>createFooter()</script>
-</footer>
+<footer class="text-center" x-data="footer" x-html="p"></footer>
 
 <script src="./js/config.js"></script>
 
