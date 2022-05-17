@@ -36,7 +36,9 @@
 .d-none {
     display: none;
 }
-
+.w-20 {
+    width: 20%;
+}
 .w-25 {
     width: 25%;
 }
@@ -109,6 +111,12 @@ header{
     margin: 10px;
 }
 
+.logo_wrapper #logo{
+    width: 50%;
+}
+.logo_wrapper p{
+    font-size: 35px;
+}
 /* MAIN */
 main {
     margin: 0 2px;
@@ -126,10 +134,10 @@ main {
 
 /* NEWS */
 .news h2 {
-    margin: 10px 5px;
+    margin: 10px 0;
 }
 .news article {
-    padding:0 15px;
+    margin: 0 20px;
 }
 .registreren form{
     margin: 2px;

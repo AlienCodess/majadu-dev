@@ -64,9 +64,12 @@ document.addEventListener('alpine:init', () => {
     Alpine.data('header', () => ({
 
         site_title: 'Majadu',
-        html: "<div class='header_wrapper d-flex justify-content-between'>" +
+        html: "<div class='header_wrapper d-flex justify-content-between align-items-center'>" +
             "                  <div class='header_title w-50'>" +
+            "                       <div class='logo_wrapper d-flex w-25 justify-content-around align-items-center'>" +
+            "                        <img src='img/logo.png' alt='' id='logo'>" +
             "                        <p x-text='site_title'></p>" +
+            "                           </div>" +
             "                    </div>\n" +
             "                    <nav class='header_nav w-50'>" +
             "                        <ul x-data='header'  class='d-flex justify-content-between list-style-type-none'>" +
@@ -134,7 +137,7 @@ document.addEventListener('alpine:init', () => {
         }
 
     ));
-    Alpine.data('footer',()=>({
+    Alpine.data('footer', () => ({
         p: '<p>&copy; Majadu</p>'
     }))
 })
