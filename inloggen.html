@@ -17,12 +17,12 @@
 <!-- MAIN -->
 <main class="d-flex">
     <!-- LEFT NAVIGATION -->
-    <div x-data="main" x-html="left_nav"></div>
+    <div x-data="main" x-html="left_nav" class="left_content"²></div>
     <!-- CONTENT -->
-    <section class="content">
+    <section class="content w-100">
         <!-- INSERT CONTENT -->
-        <h1>Inloggen</h1>
-        <form action="" class="d-flex flex-direction-column">
+        <h1 class="text-center">Inloggen</h1>
+        <form action="" class="d-flex flex-direction-column w-20">
             <label for="username" hidden></label>
             <input type="text" id="username"placeholder="Gebruikersnaam">
             <label for="password" hidden></label>
@@ -30,7 +30,7 @@
             <button type="button">Inloggen</button>
         </form>
     </section>
-    </section>
+
 </main>
 
 <!-- FOOTER -->
