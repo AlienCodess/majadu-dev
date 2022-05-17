@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+<h1>Registreren</h1>
+<form action="">
+    <h2>Profiel</h2>
+    <label for="username">Gebruikersnaam</label>
+    <input type="text" id="username">
+    <label for="date">Geboortedatum</label>
+    <input type="date" id="date">
+    <label for="password">Wachtwoord</label>
+    <input type="password" id="password">
+    <label for="password_repeat">Herhaal wachtwoord</label>
+    <input type="password" id="password_repeat">
+    <label for="token">Token</label>
+    <input type="text" id="token">
+
+    <h2>Karakter</h2>
+    <label for="avatar">Avatar</label>
+    <select name="" id="avatar">
+        <option value="avatar-1">Avatar 1</option>
+        <option value="avatar-2">Avatar 2</option>
+        <option value="avatar-3">Avatar 3</option>
+        <option value="avatar-4">Avatar 4</option>
+    </select>
+    <label for="class">Class</label>
+    <select name="" id="class">
+        <option value="c-1">Caster</option>
+        <option value="c-2">Crafter</option>
+        <option value="c-3">Alchemist</option>
+        <option value="c-4">Druïde</option>
+    </select>
+    <label for="karma">Karma</label>
+    <select name="" id="karma">
+        <option value="k-1">Positief</option>
+        <option value="k-2">Negatief</option>
+    </select>
+
+    <button onclick="register()" type="button">Registreren</button>
+</form>
+
+<script src="js/register.js"></script>
+</body>
+</html>
