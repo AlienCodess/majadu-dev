@@ -1,4 +1,6 @@
-let d = new Date();
+let d = new Date(); // get date
+
+/** REGISTRATION **/
 function register() {
     const xhr = new XMLHttpRequest();
     xhr.onload = onloadRegister;
@@ -113,3 +115,16 @@ function register() {
 
 }
 
+/** LOGIN **/
+function login() {
+    let username = document.querySelector('#username').value;
+    let password = document.querySelector('#password').value;
+
+    if (password !== user.password || password === "" || username === "") {
+        console.log("niet ok")
+    } else if (password === user.password && username === user.username) {
+        localStorage.setItem("status", "online");
+        console.log("ok")
+    }
+
+}
