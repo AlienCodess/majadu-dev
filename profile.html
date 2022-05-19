@@ -7,7 +7,10 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Inloggen</title>
     <style>
-        .d-none{
+        .offline{
+            display: none;
+        }
+        .online{
             display: none;
         }
         .active{
@@ -27,11 +30,11 @@
     </nav>
 </header>
 <main>
-<section class="d-none active">
+<section class="offline active">
     <h1>Welkom</h1>
     <p>Je bent niet ingelogd</p>
 </section>
-    <section class="d-none">
+    <section class="online">
         <h1 class="username">Gebruikersnaam</h1>
         <p>Je bent ingelogd</p>
     </section>
