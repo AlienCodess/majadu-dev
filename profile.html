@@ -26,6 +26,7 @@
             <li><a href="profile.html">Home</a></li>
             <li><a href="login.html">Login</a></li>
             <li><a href="register.html">Register</a></li>
+            <li><a href="#" class="online" onclick="logout()">Logout</a></li>
         </ul>
     </nav>
 </header>
@@ -33,6 +34,7 @@
 <section class="offline active">
     <h1>Welkom</h1>
     <p>Je bent niet ingelogd</p>
+    <button onclick="localStorage.clear()">Clear</button>
 </section>
     <section class="online">
         <h1 class="username">Gebruikersnaam</h1>

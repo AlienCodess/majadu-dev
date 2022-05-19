@@ -129,7 +129,16 @@ function login() {
         console.log("ww te klein")
     } else if (password === user.password && username === user.username) {
         localStorage.setItem("status", "online");
-        console.log("ok")
+        console.log("ok");
+        localStorage.setItem("status","online");
     }
 
+}
+
+/** LOGOUT **/
+function logout() {
+    localStorage.setItem('status', 'offline');
+    setTimeout(function () {
+        location.reload();
+    }, 1500);
 }
