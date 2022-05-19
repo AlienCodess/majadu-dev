@@ -60,6 +60,52 @@ function register() {
                 console.log("token komt niet overeen")
             } else {
                 console.log("token ok");
+                //user data
+                localStorage.setItem("id", member_id);
+                localStorage.setItem("username", username);
+                localStorage.setItem("password", password);
+                localStorage.setItem("date", date);
+                localStorage.setItem("token", token);
+                localStorage.setItem("avatar", avatar);
+                localStorage.setItem("update-version", 0);
+
+                //user info
+                localStorage.setItem("status", "offline");
+                localStorage.setItem("rank", members_rank);
+                localStorage.setItem("location", "");
+                localStorage.setItem("messages", "");
+                localStorage.setItem("notifications", "");
+
+                //character info
+                localStorage.setItem("level", "1");
+                localStorage.setItem("class", u_class);
+                localStorage.setItem("speciality", "none");
+                localStorage.setItem("karma", karma);
+
+                //character stats
+                localStorage.setItem("hp", 100);
+                localStorage.setItem("max-hp", 100);
+                localStorage.setItem("mp", 100);
+                localStorage.setItem("max-mp", 100);
+                localStorage.setItem("focus", 1);
+                localStorage.setItem("power", 1);
+                localStorage.setItem("source", 1);
+
+                //character
+                localStorage.setItem("weapon", "empty");
+                localStorage.setItem("relic", "empty");
+                localStorage.setItem("head", "empty");
+                localStorage.setItem("body", "empty");
+                localStorage.setItem("pet", "empty");
+                localStorage.setItem("spell-holder", "empty");
+                localStorage.setItem("active-spells", "empty");
+
+                //inventory
+                localStorage.setItem("gold", 0);
+                localStorage.setItem("crystals", 0);
+                localStorage.setItem("items", 0);
+                localStorage.setItem("max-items", 5);
+                localStorage.setItem("inventory", "");
             }
         }
     }
