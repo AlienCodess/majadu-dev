@@ -51,9 +51,12 @@ function register() {
             } else if (password !== password_repeat) {
                 console.log("ww niet overeen")
             } else if (password === members_token) {
-                console.log("mag niet hetzelfde zijn als de token")
+                console.log("mag niet hetzelfde zijn als de token");
 
-            } else {
+            } else if (password.length < 8){
+                console.log("ww te klein")
+            }
+            else {
                 console.log("ww ok")
             }
             if (token === "") {
@@ -122,6 +125,8 @@ function login() {
 
     if (password !== user.password || password === "" || username === "") {
         console.log("niet ok")
+    } else if(password.length < 8){
+        console.log("ww te klein")
     } else if (password === user.password && username === user.username) {
         localStorage.setItem("status", "online");
         console.log("ok")
