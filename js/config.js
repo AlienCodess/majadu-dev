@@ -67,8 +67,20 @@ window.addEventListener("load", () =>{
             console.log("error");
             break;
         case "offline":
-            for (x = 0; x < offline.length;x++){
-                offline[x].className = this.className.replace("active","");
+            for (x = 0; x < online.length; x++){
+                online[x].className = online[x].className.replace("active","");
             }
+            for (x = 0; x < offline.length; x++){
+                offline[x].classList.add("active");
+            }
+            break;
+        case "online":
+            for (x = 0; x < offline.length; x++){
+                offline[x].className = offline[x].className.replace("active","");
+            }
+            for (x = 0; x < online.length; x++){
+                online[x].classList.add("active");
+            }
+            break;
     }
 })
