@@ -49,7 +49,26 @@ let user = {
 
 };
 
+const offline = document.querySelectorAll(".offline");
+const online = document.querySelectorAll(".online");
+
 /** SET UP TITLE **/
 let site_title = "Majadu";
 let sub_title = document.querySelector("h1").innerHTML;
 document.title = `${site_title} - ${sub_title}`;
+
+/** CHECK STATUS **/
+
+
+window.addEventListener("load", () =>{
+    let x;
+    switch (user.status){
+        default:
+            console.log("error");
+            break;
+        case "offline":
+            for (x = 0; x < offline.length;x++){
+                offline[x].className = this.className.replace("active","");
+            }
+    }
+})
