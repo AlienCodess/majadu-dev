@@ -1,4 +1,4 @@
-const site_title = "Majadu";
+/*const site_title = "Majadu";*/
 let sub_title;
 
 /** HEADER CREATION **/
