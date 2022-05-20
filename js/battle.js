@@ -25,35 +25,35 @@ let attack = [
 let enemy = {
     "name": "random",
     "level": 1,
-    "damage": 10,
+    "damage": 50,
     "max_hp": 100,
     "hp": 100,
 }
 
-let turn = true;
+let turn = true;// decides if its player turn or not 
 
-const enemy_hp = document.querySelector('#enemyHealth');
-localStorage.setItem("hp", "200");
-localStorage.setItem("maji", "200");
-localStorage.setItem("username", "steel");
-const username = document.querySelector('.username');
-const avatar = document.querySelector('.avatar');
-const hp = document.querySelector('#hp');
-const mp = document.querySelector('#mp');
-const attacks = document.querySelectorAll('.attack');
-const start_lvl = 1;
-const log = document.querySelector("#log");
+const enemy_hp = document.querySelector('#enemyHealth');  //creates a variable 
+localStorage.setItem("hp", "200");      //sets player hp to 200
+localStorage.setItem("maji", "200");    //sets player mp to 200
+localStorage.setItem("username", "steel");//sets player username to steel (just to test) --> needs to change to player name of the account
+const username = document.querySelector('.username');//var with the html class of username
+const avatar = document.querySelector('.avatar');//var with the html class of avatar
+const hp = document.querySelector('#hp');//var with the html id of hp
+const mp = document.querySelector('#mp');//var with the html id of mp
+const attacks = document.querySelectorAll('.attack');//var with the html class of hp
+const start_lvl = 1;//var debug level of 1
+const log = document.querySelector("#log");//var with the html id of log
 localStorage.setItem("level", JSON.stringify(start_lvl));
 
 function enemy_attack() {
-    enemy_damage_handler(enemy.damage)
+    enemy_damage_handler(enemy.damage);//enemy damage handler, var of enemy damage as function input
 }
 function player_attack(x) {
-    player_damage_handler(attack[x].attack,attack[x].mp_cost);
+    player_damage_handler(attack[x].attack, attack[x].mp_cost);//player damage handler with var for attack damage and attack mp's consumption
 }
 
 
-for (let x = 0; x < attacks.length; x++) {
+for (let x = 0; x < attacks.length; x++) {//runs trough the buttons
     attacks[x].innerHTML = attack[x].name;
     attacks[x].onclick = () => {
         if (turn !== true) {
@@ -66,25 +66,37 @@ for (let x = 0; x < attacks.length; x++) {
 
 
     };
-}
-
+};
+function backpack(){}
+function run_away(){
+    log.innerHTML = "<p class='Log'>" + user.username + " ran away " + "</p>" + log.innerHTML
+};
 
 /** ##  START SCRIPT ## **/
 
-function player_damage_handler(damage, consumption){
-    if (hp.value<= 0 || enemy.hp <= 0|| mp.value <= 0)  {
-        /** ##  START new player spawn ## **/ 
-    }
-    else {
-        log.innerHTML = "<p class='playerLog'>"+user.username +" hit with "+ damage+"</p>" + log.innerHTML
+function player_damage_handler(damage, consumption) {
+    if (enemy.hp <= 0) {
+        log.innerHTML = "<p class='Log'>" + enemy.name + " was slain " + "</p>" + log.innerHTML
+    } else if (hp.value <= 0) {
+        log.innerHTML = "<p class='playerLog'>" + user.username + " has no hp left " + "</p>" + log.innerHTML
+    } else if (mp.value <= 0) {
+        log.innerHTML = "<p class='playerLog'>" + user.username + " has no mp left " + "</p>" + log.innerHTML
+
+    } else {
+        log.innerHTML = "<p class='playerLog'>" + user.username + " hit with " + damage + "</p>" + log.innerHTML
         enemy.hp -= damage;
         mp.value -= consumption;
         loadEnemy();
     }
 }
 function enemy_damage_handler(damage) {
-    if (hp.value<= 0 || enemy.hp <= 0|| mp.value <= 0) {
-        /** ##  START new enemy spawn ## **/
+    if (enemy.hp <= 0) {
+        log.innerHTML = "<p class='Log'>" + enemy.name + " was slain " + "</p>" + log.innerHTML
+    } else if (hp.value <= 0) {
+        log.innerHTML = "<p class='playerLog'>" + user.username + " has no hp left " + "</p>" + log.innerHTML
+    } else if (mp.value <= 0) {
+        log.innerHTML = "<p class='playerLog'>" + user.username + " has no mp left " + "</p>" + log.innerHTML
+
     }
     else {
         console.log("hit");
