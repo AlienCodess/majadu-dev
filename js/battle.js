@@ -43,13 +43,13 @@ const mp = document.querySelector('#mp');
 const attacks = document.querySelectorAll('.attack');
 const start_lvl = 1;
 const log = document.querySelector("#log");
-localStorage.setItem("level", start_lvl);
+localStorage.setItem("level", JSON.stringify(start_lvl));
 
 function enemy_attack() {
     enemy_damage_handler(enemy.damage)
 }
-function player_attack(y) { 
-    player_damage_handler(attack[y].attack,attack[y].mp_cost);
+function player_attack(x) {
+    player_damage_handler(attack[x].attack,attack[x].mp_cost);
 }
 
 
@@ -92,7 +92,7 @@ function enemy_damage_handler(damage) {
         log.innerHTML = "<p class='enemyLog'>enemy hit</p>" + log.innerHTML
 
     }
-};
+}
 
 
 function loadEnemy() {
