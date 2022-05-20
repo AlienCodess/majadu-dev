@@ -53,7 +53,6 @@ const offline = document.querySelectorAll(".offline");
 const online = document.querySelectorAll(".online");
 
 /** SET UP TITLE **/
-let site_title = "Majadu";
 let sub_title = document.querySelector("h1").innerHTML;
 document.title = `${site_title} - ${sub_title}`;
 
