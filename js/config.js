@@ -53,7 +53,7 @@ const offline = document.querySelectorAll(".offline");
 const online = document.querySelectorAll(".online");
 
 /** SET UP TITLE **/
-let sub_title = document.querySelector("h1").innerHTML;
+sub_title = document.querySelector("h1").innerHTML;
 document.title = `${site_title} - ${sub_title}`;
 
 /** CHECK STATUS **/
