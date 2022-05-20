@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/template.js"></script>
+
+    <title></title>
+</head>
+<body>
+<!--HEADER-->
+<header x-data="header" x-html="html"></header>
+<!-- MAIN -->
+<main class="d-flex">
+    <!-- LEFT NAVIGATION -->
+    <div x-data="main" x-html="left_nav" class="left_content"></div>
+    <!-- CONTENT -->
+
+    <section class="content w-100">
+        <h1 class="text-center">Home</h1>
+        <!-- NEWS -->
+        <div class="news d-flex flex-direction-column">
+            <h2>Nieuws</h2>
+            <div class="news_wrapper d-flex flex-wrap">
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+            </div>
+            <h2>Laatste Updates</h2>
+            <div class="news_wrapper d-flex flex-wrap justify-content-around">
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+                <article class="w-25">
+                    <h3>News Title</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi at cum dolorem doloremque ducimus
+                        et hic inventore, nesciunt optio perspiciatis porro quas rerum sapiente unde voluptate
+                        voluptates voluptatibus. Aut, enim.</p>
+                    <button>Lees meer</button>
+                </article>
+            </div>
+        </div>
+        <!-- END NEWS -->
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center" x-data="footer" x-html="p">
+</footer>
+
+<script src="./js/config.js"></script>
+
+</body>
+</html>

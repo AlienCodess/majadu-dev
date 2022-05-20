@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/template.js"></script>
+
+    <title></title>
+</head>
+<body>
+<!--HEADER-->
+<header x-data="header" x-html="html"></header>
+<!-- MAIN -->
+<main class="d-flex">
+    <!-- LEFT NAVIGATION -->
+    <div x-data="main" x-html="left_nav" class="left_content"²></div>
+    <!-- CONTENT -->
+    <section class="content w-100">
+        <!-- INSERT CONTENT -->
+        <h1 class="text-center">Inloggen</h1>
+        <form action="" class="d-flex flex-direction-column w-20">
+            <label for="username" hidden></label>
+            <input type="text" id="username"placeholder="Gebruikersnaam">
+            <label for="password" hidden></label>
+            <input type="password" id="password"placeholder="Wachtwoord">
+            <button type="button">Inloggen</button>
+        </form>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center" x-data="footer" x-html="p"></footer>
+
+<script src="./js/config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="./css/main.css" rel="stylesheet">
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+    <script src="./js/template.js"></script>
+
+    <title></title>
+</head>
+<body>
+<!--HEADER-->
+<header x-data="header" x-html="html"></header>
+<!-- MAIN -->
+<main class="d-flex">
+    <!-- LEFT NAVIGATION -->
+    <div x-data="main" x-html="left_nav" class="left_content"></div>
+    <!-- CONTENT -->
+    <section class="content w-100">
+        <h1>Registreren</h1>
+        <div class="registreren w25">
+            <form action="" class="d-flex flex-direction-column w-20">
+                <label for="username" hidden></label>
+                <input id="username" placeholder="Gebruikersnaam" type="text">
+                <label for="password" hidden></label>
+                <input id="password" placeholder="Wachtwoord" type="password">
+                <label for="repeat_password" hidden></label>
+                <input id="repeat_password" placeholder="Herhaal Wachtwoord" type="password">
+
+                <label for="token"></label>
+                <input id="token" name="token" placeholder="Token" type="text">
+                <label for="class" hidden></label>
+                <select class="select_field" id="class" name="class">
+                    <option value="Caster">Caster</option>
+                    <option value="Crafter">Crafter</option>
+                    <option value="Alchemist">Alchemist</option>
+                    <option value="Druide">Druide</option>
+                </select>
+                <label for="karma" hidden></label>
+                <select id="karma" name="karma">
+                    <option value="Positief">Positief</option>
+                    <option value="Negatief">Negatief</option>
+                </select>
+                <button type="button">Registreren</button>
+            </form>
+        </div>
+    </section>
+
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center" x-data="footer" x-html="p"></footer>
+
+<script src="./js/config.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,173 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/** FLEXBOX **/
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.d-none {
+    display: none;
+}
+.w-20 {
+    width: 20%;
+}
+.w-25 {
+    width: 25%;
+}
+
+.w-35 {
+    width: 35%;
+}
+
+.w-46 {
+    width: 46%;
+}
+
+.w-50 {
+    width: 50%;
+}
+
+.w-65 {
+    width: 65%;
+}
+
+.w-75 {
+    width: 75%;
+}
+
+.w-100 {
+    width: 100%;
+}
+
+.text-decoration-none {
+    text-decoration: none;
+}
+
+.list-style-type-none {
+    list-style-type: none;
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.text-lowercase {
+    text-transform: lowercase;
+}
+
+.text-capitalize {
+    text-transform: capitalize;
+}
+
+.text-center {
+    text-align: center;
+}
+/* JS SELECTORS */
+.guest{
+    display: block;
+}
+.member{
+    display: none;
+}
+
+/* BODY */
+body{
+ height: 100vh;
+    background: rgba(226,218,211,0.4);
+}
+
+/* HEADER */
+header{
+
+}
+.header_wrapper{
+    margin: 10px;
+}
+
+.logo_wrapper #logo{
+    width: 45%;
+}
+.logo_wrapper p{
+    font-size: 30px;
+}
+/* MAIN */
+main {
+    margin: 0 2px;
+    height: 100vh;
+}
+/* LEFT NAV */
+.left_content{
+    background: rgba(226,218,211,0.5);
+}
+.left_nav{
+    padding: 0 10px;
+
+}
+
+/* CONTENT */
+.content{
+    background: rgba(226,218,211,0.2);
+    padding-left: 15px;
+}
+.content h1 {
+    background: rgba(226,218,211,0.5);
+    padding: 5px 0;
+}
+
+/* NEWS */
+.news h2 {
+    font-size: 20px;
+    padding-left:5px ;
+    border: 2px solid rgba(81,78,45,0.5);
+    background: rgba(192,167,136,0.3);
+}
+.news_wrapper{
+    margin: 10px 0;
+}
+
+.news article p{
+    padding-right:25%;
+}
+/* END NEWS*/
+
+/* SIGN UP*/
+.registreren form{
+    margin: 2px;
+}
+/*END SIGNUP*/
+
+/*END MAIN*/
+
+/* FOOTER */
+footer{
+    background: rgba(226,218,211,0.5);
+    padding: 10px 0;
+}
