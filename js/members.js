@@ -41,7 +41,7 @@ function register() {
                 } else {
                     console.log("gebruikers naam ok")
                     member_id = x;
-                    break;
+
                 }
             }
             /* PASSWORD */
