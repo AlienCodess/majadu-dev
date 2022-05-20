@@ -1,0 +1,25 @@
+{
+  "members": [
+    {
+    "username": "Jelle",
+    "token": "MpkWSjewKy",
+    "rank": "Admin"
+  },
+    {
+      "username": "Martian",
+      "token": "juBuNDzJLG",
+      "rank": "Admin"
+    },
+    {
+      "username": "Steel",
+      "token": "MQMASkNG3V",
+      "rank": "Admin"
+    },
+    {
+      "username": "Jasper",
+      "token": "vW2UzjRLgr",
+      "rank": "User"
+    }
+
+  ]
+}

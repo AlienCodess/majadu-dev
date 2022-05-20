@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+          name="viewport">
+    <meta content="ie=edge" http-equiv="X-UA-Compatible">
+    <link href="https://aliencodess.github.io/majadu-dev/css/main.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    
+
+    <title></title>
+</head>
+<body>
+<!--HEADER-->
+<header>
+    
+</header>
+<!-- MAIN -->
+<main class="d-flex">
+    <!-- LEFT NAVIGATION -->
+    
+    <!-- CONTENT -->
+    <section class="content w-100">
+        <h1>Turn Based Battle System</h1>
+        <div class="d-flex justify-content-center"> <section id="battleWindow">
+            <div id="battleDiv">
+                <img alt="" id="bg" src="img/bg.png">
+                <h2><span class="enemyName">Mewtwo</span> - lvl <span class="enemyLvl">5</span></h2>
+                <!-- ENEMY -->
+                <div id="enemy" class="d-flex text-center align-items-center flex-direction-column">
+                    <img alt="" src="img/Snake.png">
+                    <meter id="enemyHealth" max="" value=""></meter>
+                    <p><span id="enemyHP">100</span> / <span id="enemyMaxHP">100</span></p>
+                </div>
+                <!-- PLAYER -->
+                <div class="d-flex" id="playerInfo">
+                    <div id="playerBase">
+                        <h3 class="username">Player name</h3>
+                        <img class="avatar" alt="" src="">
+                    </div>
+                    <div id="playerData">
+                        <label for="hp">Health</label>
+                        <meter id="hp" max="" value=""></meter>
+                        <label for="mp">Magic</label>
+                        <meter id="mp" max="" value=""></meter>
+                    </div>
+                </div>
+            </div>
+            <div class="d-flex justify-content-between w-100" id="gameFooter">
+                <div class="d-flex w-100" id="attackNav">
+                    <button class="attack">Attack 1</button>
+                    <button class="attack">Attack 2</button>
+                    <button class="attack">Attack 3</button>
+                    <button class="attack">Attack 4</button>
+                </div>
+                <nav class="w-35" id="battleNav">
+                    <ul class="d-flex flex-direction-column text-center list-style-type-none">
+                        <li>
+                            <button type="button" onclick="attacks()">Attacks</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="backpack()">Backpack</button>
+                        </li>
+                        <li>
+                            <button type="button" onclick="run_away()">Run</button>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+        </section>
+            <section id="battleLog" class="text-center">
+                <h2>Battle Log</h2>
+                <div id="log">
+                    
+                
+                </div>
+
+            </section></div>
+
+    </section>
+</main>
+
+<!-- FOOTER -->
+<footer class="text-center">
+    
+</footer>
+
+<script src="https://aliencodess.github.io/majadu-dev/js/config.js"></script>
+<script src="js/battle.js"></script>
+
+</body>
+</html>
