@@ -20,7 +20,7 @@
 
     </style>
 </head>
-<body>
+<body onload="memblist()">
 <header>
     <nav>
         <ul>
@@ -35,18 +35,18 @@
     </nav>
 </header>
 <main>
-    <h1>Profiel</h1>
-<section class="offline active">
-
-    <p>Je bent niet ingelogd</p>
-</section>
-    <section class="online">
-        <h2 class="username">Gebruikersnaam</h2>
-        <p>Je bent ingelogd</p>
+    <h1>Ledenlijst</h1>
+    <section class="offline active">
+        <p>Je bent niet ingelogd</p>
     </section>
+    <section class="online">
+        <!-- MEMBERLIST SECTION -->
+        <div id="list">
+            <ul id="memberlist" >
 
-
-
+            </ul>
+        </div>
+    </section>
 </main>
 <script src="https://aliencodess.github.io/majadu-dev/js/config.js"></script>
 <script src="/js/members.js"></script>

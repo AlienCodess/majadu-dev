@@ -10,7 +10,7 @@ function register() {
 
     function onloadRegister() {
         let username, date, password, password_repeat, token, avatar, u_class, karma,
-        members_username, members_token, members_rank, member_id;
+            members_username, members_token, members_rank, member_id;
         let json = JSON.parse(this.responseText);
         let members = json["members"];
 
@@ -52,10 +52,9 @@ function register() {
             } else if (password === members_token) {
                 console.log("mag niet hetzelfde zijn als de token");
 
-            } else if (password.length < 8){
+            } else if (password.length < 8) {
                 console.log("ww te klein")
-            }
-            else {
+            } else {
                 console.log("ww ok")
             }
             if (token === "") {
@@ -125,12 +124,12 @@ function login() {
 
     if (password !== user.password || password === "" || username === "") {
         console.log("niet ok")
-    } else if(password.length < 8){
+    } else if (password.length < 8) {
         console.log("ww te klein")
     } else if (password === user.password && username === user.username) {
         localStorage.setItem("status", "online");
         console.log("ok");
-        localStorage.setItem("status","online");
+        localStorage.setItem("status", "online");
     }
 
 }
@@ -143,92 +142,59 @@ function logout() {
     }, 1500);
 }
 
-/*
-function memberlist() {
+/** CHANGE PASS **/
+function changePass() {
+    let new_pass = document.querySelector('#new_pass');
+    let new_pass_repeat = document.querySelector('#repeat_new_pass');
+    let old_pass = document.querySelector('#old_pass');
+
+    if (new_pass.value === "" || new_pass_repeat.value === "" || old_pass.value === "") {
+       console.log("Er zijn velden niet ingevuld");
+    } else if (new_pass.value !== new_pass_repeat.value) {
+        console.log("De nieuwe wachtwoorden komen niet overeen");
+    } else if (old_pass.value !== user.password) {
+        console.log("Je wachtwoord is niet juist.");
+    } else if (new_pass.value === old_pass.value) {
+        console.log("Het nieuwe wachtwoord en het oude wachtwoord mogen niet hetzelfde zijn.");
+    } else if (new_pass.value === user.token) {
+        console.log("Het nieuwe wachtwoord mag niet hetzelfde zijn als je token.");
+    } else {
+        console.log("Je wachtwoord is succesvol veranderd");
+        localStorage.setItem("password", new_pass.value);
+        setTimeout(function () {
+            logout();
+            location.reload();
+        }, 1500);
+    }
+
+}
+
+/** CHANGE AVATAR **/
+function changeAvatar(){
+    let new_avatar = document.querySelector("#avatar").value;
+    localStorage.setItem("avatar", new_avatar);
+    console.log("Je avatar is succesvol veranderd");
+
+}
+
+/** MEMBERLIST **/
+function memblist () {
+    let memberlist = document.querySelector('#memberlist');
+    let username;
     const xhr = new XMLHttpRequest();
-    xhr.onload = onload_Memberlist;
-    xhr.open("GET", "data/members.json", true);
+    xhr.onload = onloadMembers;
+    xhr.open("GET", "./data/members.json", true);
     xhr.send(null);
 
-    function onload_Memberlist() {
-        let table_memberlist = document.querySelector('#table_memberlist');
-        let tb_memberlist = document.querySelector('#tb_memberlist');
-        console.log(tb_memberlist);
-        if (tb_memberlist !== null) {
-            tb_memberlist.remove();
-        }
+    function onloadMembers() {
 
         let json = JSON.parse(this.responseText);
         let members = json["members"];
-        let tbody, tr, td, div, img, a, button, i;
-        tbody = document.createElement("tbody");
-        for (let x = 0; x < members.length; x++) {
-
-            tr = document.createElement("tr");
-
-            td = document.createElement("td");
-            td.className = "id";
-            td.innerHTML = x.toString();
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            div = document.createElement("div");
-            img = document.createElement("img");
-            a = document.createElement("a");
-            tbody.id = "tb_memberlist";
-            div.className = "member d_flex";
-            img.src = "img/profile.gif";
-            a.href = "#";
-            a.innerText = members[x].username;
-            div.appendChild(img);
-            div.appendChild(a);
-            td.appendChild(div);
-            tr.appendChild(td);
-
-
-            td = document.createElement("td");
-            td.className = "rank";
-            td.innerHTML = members[x].rank;
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            td.className = "class";
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            td.className = "speciality";
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            td.className = "location";
-            tr.appendChild(td);
-
-            td = document.createElement("td");
-            button = document.createElement("button");
-            i = document.createElement("i");
-            i.className = "ri-user-add-fill";
-            button.appendChild(i);
-            td.appendChild(button);
-            tr.appendChild(td);
-            tbody.appendChild(tr);
-
-            /!*<tr>
-                <td>
-                    <div className="member d_flex">
-                        <img src="img/profile.gif" alt="">
-                            <a href="">Member</a>
-                    </div>
-                </td>
-                <td className="id"></td>
-                <td className="rank"></td>
-                <td className="class"></td>
-                <td className="speciality"></td>
-                <td className="location"></td>
-                <td>
-                    <button><i className="ri-user-add-fill"></i></button>
-                </td>
-            </tr>*!/
+        for (var x = 0; x < members.length; x++) {
+            username = document.createElement('li');
+            username.innerHTML = members[x].username;
+            memberlist.appendChild(username);
         }
-        table_memberlist.appendChild(tbody);
     }
-}*/
+}
+

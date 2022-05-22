@@ -35,18 +35,36 @@
     </nav>
 </header>
 <main>
-    <h1>Profiel</h1>
-<section class="offline active">
-
-    <p>Je bent niet ingelogd</p>
-</section>
-    <section class="online">
-        <h2 class="username">Gebruikersnaam</h2>
-        <p>Je bent ingelogd</p>
+    <h1>Instellingen</h1>
+    <section class="offline active">
+        <p>Je bent niet ingelogd</p>
     </section>
-
-
-
+    <section class="online">
+        <p>Hier kan jij je instellingen veranderen.</p>
+        <h2>Wachtwoord wijzigen</h2>
+        <form action="">
+            <label for="new_pass">Nieuw wachtwoord</label>
+            <input type="password" id="new_pass">
+            <label for="repeat_new_pass">Herhaal nieuw wachtwoord</label>
+            <input type="password" id="repeat_new_pass">
+            <label for="old_pass">Oud wachtwoord</label>
+            <input type="password" id="old_pass">
+            <button type="button" onclick="changePass()">Verander wachtwoord</button>
+        </form>
+        <h2>Avatar wijzigen</h2>
+        <form action="">
+            <label for="avatar">Avatar</label>
+            <select name="" id="avatar">
+                <option value="a-1">Avatar 1</option>
+                <option value="a-2">Avatar 2</option>
+                <option value="a-3">Avatar 3</option>
+                <option value="a-4">Avatar 4</option>
+            </select>
+            <button type="button" onclick="changeAvatar()">Avatar wijzigen</button>
+        </form>
+        <h2>Account wissen</h2>
+        <button onclick="localStorage.clear()">Account wissen</button>
+    </section>
 </main>
 <script src="https://aliencodess.github.io/majadu-dev/js/config.js"></script>
 <script src="/js/members.js"></script>
