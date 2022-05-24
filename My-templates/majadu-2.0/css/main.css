@@ -1,0 +1,304 @@
+
+/* =============== ROOT =============== */
+:root{
+    --font-color: hsl(0, 0%, 13%);
+
+    --clr-1: hsl(0, 0%, 86%);
+    --clr-1-1: hsl(0, 0%, 80%);
+    --clr-2: hsl(13, 7%, 26%);
+    --clr-2-1: hsla(13, 7%, 26%, .8);
+    --clr-2-2: hsl(0, 15%, 31%);
+    --clr-3: hsla(0, 11%, 49%, 0.4);
+    --clr-4: hsl(32, 70%, 92%);
+    --clr-4-4: rgb(230, 216, 148);
+
+    --font-1: 'Macondo', cursive;
+    --font-2: 'Eczar', serif;
+}
+
+
+/* =============== DEFAULT  =============== */
+li{list-style-type: none;}
+a{text-decoration: none;}
+button{outline: 0;border: none;cursor: pointer;}
+a:hover,
+button:hover{opacity: .6;transition: all ease-in-out 300ms;}
+h2{
+    line-height: 1.6;
+    font-size: 26px;
+    background-color: var(--clr-2);
+    font-weight: bold;
+    color: var(--clr-1);
+    padding: 0 10px;
+    display: inline-block;
+    position: relative;
+    border-radius: 5px;
+}
+h2::before{
+    content: '';
+    width: 15px;
+    height: 15px;
+    background-color: var(--clr-2);
+    position: absolute;
+    top: 30px;
+    left: 45px;
+    transform: rotate(-45deg);
+    z-index: -1;
+}
+.d_flex{display: flex;}
+
+*,*::before,*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: var(--font-1);
+    color: var(--font-color);
+    background-color: var(--clr-4);
+    /* background-image: url(/img/stars.gif); */
+    
+}
+/* =============== HEADER  =============== */
+
+
+.header{
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--clr-2);
+    flex-wrap: wrap;
+    gap: 10px;
+    font-family: var(--font-2);
+}
+.header p a{
+    color: var(--clr-1);
+    font-size: 30px;
+}
+.header ul li{
+    display: inline-block;
+    padding-left: 40px;
+}
+.header ul li a{
+    color: var(--clr-1);
+    font-weight: bold;
+    font-size: 15px;
+    font-weight: bold;
+}
+.main_header ul li a.activelink{color: var(--clr-4-4);}
+
+
+
+/* =============== SECTIONS  =============== */ 
+.sections {
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    margin: 40px;
+}
+
+
+/*--- NAVIGATION SECTION ---*/
+.nav_section{
+    flex-basis: 150px;
+    font-weight: bolder;
+    /* display: none; */
+}
+.nav_section h3{
+    line-height: 1.6;
+}
+.nav_section ul{
+    padding-bottom: 20px;
+}
+.nav_section ul li{
+    padding: 5px 0;
+}
+.nav_section ul li a{
+    color: var(--clr-2);
+    font-family: var(--font-2);
+    font-size: 14px;
+}
+
+
+/*--- CONTENT SECTION ---*/
+.content_section{
+    flex-basis: 100%;
+}
+
+
+/* BANNER */
+.banner{margin-bottom: 20px;}
+.banner img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    object-position: center;
+}
+
+/* STORYLINE */
+.storyline{
+    margin-top: 30px;
+}
+
+/* ARTICLES */
+.articles_section{
+    margin-top: 40px;
+}
+.articles{
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.article{
+    margin: 20px 0;
+    flex: 1 1 400px;
+}
+.article h3{
+    line-height: 1.6;
+    font-size: 24px;
+}
+.article p{
+    line-height: 1.5;
+    font-size: 17px;
+}
+.article button{
+    background-color: var(--clr-2);
+    color: var(--clr-1);
+    padding: 5px 10px;
+    margin-top: 10px;
+    font-family: var(--font-2);
+    font-weight: bold;
+    border-radius: 5px;
+}
+
+
+
+/*--- GAME UPDATES ---*/
+.game_updates_section{
+    margin-top: 30px;
+}
+.game_updates{
+    margin-top: 20px;
+    flex-basis: 33%;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.game_news{
+    flex: 1 1 250px;
+    background-color: var(--clr-3);
+    padding: 10px;
+    position: relative;
+}
+.game_news:hover{
+    transform: scale(1.05);
+    transition: all ease-in-out 300ms;
+    cursor: pointer;
+    background-color: var(--clr-1-1);
+}
+.game_news h4{
+    font-weight: bold;
+    line-height: 1.6;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: var(--clr-2-1);
+    color: var(--clr-1);
+    padding: 10px;
+    font-family: var(--font-2);
+}
+
+
+.game_news img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.game_news span{
+    line-height: 3;
+    color: var(--clr-2-2);
+    font-family: var(--font-2);
+}
+.game_news p{
+    line-height: 1.6;
+}
+
+
+
+/* =============== FOOTER  =============== */
+
+.footer{
+    background-color: var(--clr-2);
+    margin-top: 40px;
+    color: var(--clr-1);
+    padding: 20px;
+    font-family: var(--font-2);
+}
+.footer_links{
+    justify-content: center;
+    align-items: center;
+}
+.footer_links ul{
+    border-top: 1px solid var(--clr-1-1);
+    border-bottom: 1px solid var(--clr-1-1);
+}
+.footer_links ul li{
+    display: inline-block;
+    padding: 10px;
+}
+.footer_links ul li a{
+    font-size: 20px;
+    color: var(--clr-1-1);
+}
+
+.footer_bottom{
+    background-color: var(--font-color);
+    padding: 10px;
+    color: var(--clr-1-1);
+    align-items: center;
+    justify-content: center;
+}
+.footer_bottom ul li {
+    display: inline-block;
+}
+.footer_bottom ul li a{
+    color: var(--clr-1);
+    font-family: var(--font-2);
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+}
+.footer_bottom ul li a:hover{
+    text-decoration: underline;
+}
+
+/* =============== RESPONSIVE  =============== */ 
+@media screen and (max-width: 800px) {
+    /* ========== HEADER ==========*/
+    .header{
+        display: grid;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    .header p {
+        text-align: center;
+        padding-top: 10px;
+    }
+    .header ul li{
+        display: grid;
+        justify-content: center;
+        line-height: 2.6;
+        padding-left: 0px;
+        /* display: none; */
+    }
+    /* ========== NAVIGATION ==========*/
+    .nav_section{
+        display: none;
+    }
+}
