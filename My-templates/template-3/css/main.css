@@ -1,0 +1,195 @@
+@import url('http://fonts.cdnfonts.com/css/captain-meredith');
+@import url('http://fonts.cdnfonts.com/css/nova-square-slim');
+
+:root{
+    --default-font: 'Captain Meredith', sans-serif;
+    --second-font: 'Nova Square Slim', sans-serif;
+
+    --body-clr: #060606;
+    --font-clr: #ededed;
+
+    --black: #00000063;
+    --black-trans: hsla(0, 0%, 9%, 0.705);
+    --clr-blue: #7087d3;
+
+    --transition: all ease-in-out 250ms;
+}
+
+*,*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+    list-style-type: none;
+    text-decoration: none;
+}
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    font-family: var(--default-font);
+    font-weight: bold;
+    letter-spacing: 1px;
+    background:linear-gradient(0deg, var(--black-trans), var(--black-trans)), url(../img/bg.jpg);
+    color: var(--font-clr);
+}
+a{
+    transition: var(--transition);
+}
+
+img{
+    display: block;
+    object-fit: cover;
+}
+.top_navigation ul li a.active,
+.sidebar_list ul li a.active{
+    color: var(--clr-blue);
+    opacity: 1;
+}
+
+.big_title{
+   font-size: 35px;
+   background-color: var(--black-trans);
+   border: 4px solid var(--black);
+   padding: 20px;
+   text-align: center;
+}
+
+/* ++++++++++ HEADER ++++++++++ */
+.top_header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: var(--black-trans);
+    border-bottom: 4px solid var(--black);
+}
+
+/* LOGO */
+.top_header .header_logo a{
+    font-size: 30px;
+    color: var(--font-clr);
+}
+
+/* NAVIGATION */
+.top_navigation ul li{
+    display: inline-flex;
+}
+.top_navigation ul li a{
+    margin-left: 30px;
+    color: var(--font-clr);
+    opacity: .6;
+    font-family: var(--second-font);
+}
+.top_navigation ul li a:hover{
+    color: var(--clr-blue);
+    opacity: 1;
+}
+
+
+
+/* ++++++++++ MAIN CONTENT ++++++++++ */
+
+.main_container{
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin: 20px;
+}
+
+/*  -- SIDEBAR CONTAINER  -- */
+.sidebar_container{
+    flex-basis: 250px;
+    display: flex;
+    gap: 20px;
+    flex-flow: column;
+}
+
+.sidebar_group{
+    background-color: var(--black-trans);
+    padding: 20px;
+    border: 4px solid var(--black);
+    border-radius: 5px;
+}
+
+.sidebar_titles{
+    margin-bottom: 10px;
+}
+
+.sidebar_list ul li a{
+    opacity: .6;
+    color: var(--font-clr);
+    font-family: var(--second-font);
+}
+.sidebar_list ul li a:hover{
+    opacity: 1;
+    color: var(--clr-blue);
+}
+
+/* -- CONTENT CONTAINER -- */
+.content_container{
+    flex-basis: 100%;
+}
+
+/* BANNER */
+.topbanner_container{
+   margin-bottom: 20px;
+   border: 4px solid var(--black);
+   border-radius: 5px;
+}
+.topbanner_container img{
+    width: 100%;
+    height: 300px;
+}
+
+/* GAMENEWS */
+
+.gamenews_section{
+    display: flex;
+    gap: 20px;
+    font-family: var(--second-font);
+}
+
+.gamenews_list{
+    margin: 20px 0;
+    width: 100%;
+    border: 4px solid var(--black);
+    border-radius: 5px;
+    transition: var(--transition);
+    position: relative;
+}
+.gamenews_list:hover{
+    transform: scale(1.03);
+}
+.gamenews_list img{
+    width: 100%;
+    height: 300px;
+}
+
+.gamenews_banner{
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 10px;
+    background-color: var(--clr-blue);
+    font-size: 18px;
+    width: min-content;
+    margin: 10px;
+    color: var(--body-clr);
+
+}
+
+.gamenews_title{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 20px;
+    margin: 10px;
+    color: var(--font-clr);
+    width: fit-content;
+    background-color: var(--black-trans);
+}

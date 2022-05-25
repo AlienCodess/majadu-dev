@@ -1,0 +1,225 @@
+
+
+:root{
+    --clr-light-grey: #bcbcbc;
+    --clr-dark-grey: hsla(0, 0%, 9%, 0.651);
+    --clr-black: hsla(0, 0%, 6%, 0.712);
+    --clr-blue: hsla(229, 54%, 22%, 0.863);
+    --clr-red: hsl(0, 49%, 42%);
+
+    --font-1: 'Captain Meredith', sans-serif;
+    --font-2: 'Black Drama Demo', sans-serif;
+    --font-3: 'Nova Flat Slim', sans-serif;
+
+    --transition: all ease-in-out 250ms;
+}
+
+*,*::before,
+*::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: 0;
+    list-style-type: none;
+    text-decoration: none;
+}
+
+
+body{
+    background:linear-gradient(0deg, var(--clr-black), var(--clr-black)), url(../img/stars.gif);
+    color: var(--clr-light-grey);
+    font-family: var(--font-1);
+    letter-spacing: 1px;
+}
+
+.d_flex{display: flex;}
+h2,h3{font-family: var(--font-2);}
+a:hover,button:hover{transition: var(--transition);}
+img{display: block;}
+
+
+/* ++++++++ HEADER ++++++++ */
+.header {
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    background-color: var(--clr-dark-grey);
+}
+.header p a {
+    font-size: 35px;
+    color: var(--clr-light-grey);
+    font-family: var(--font-2);
+}
+.header ul li {
+    display: inline-block;
+}
+.header ul li a {
+    padding-left: 40px;
+    color: var(--clr-light-grey);
+    font-size: 18px;
+}
+.header ul li a:hover{
+    color: var(--clr-red);
+    opacity: 1;
+    text-shadow: 2px #632828;
+}
+.nav_group ul li a.active,
+.header ul li a.active{
+    color: var(--clr-red);
+}
+
+/* ++++++++ SECTIONS ++++++++ */
+.sections{
+    gap: 20px;
+    margin: 20px;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+/* ---- SIDEBAR SECTION ---- */
+.sidebar_section{
+    /* display: none; */
+    flex-basis: 250px;
+}
+
+/* PROFILE PREVIEW ONLINE */
+.profile_sidebar_name{
+    background-color: var(--clr-dark-grey);
+    align-items: center;
+    gap: 10px;
+    padding: 10px 20px;
+    justify-content: center;
+}
+.profile_sidebar_name img{
+    border-radius: 50%;
+    height: 50px;
+    width: 50px;
+    object-fit: cover;
+    border: 3px solid var(--clr-dark-grey);
+}
+.profile_sidebar_name a {
+    color: var(--clr-light-grey);
+    font-family: var(--font-3);
+    font-weight: bold;
+    font-size: 20px;
+}
+.profile_preview_online a:hover{
+    color: var(--clr-red);
+}
+
+.profile_stats_group{
+    padding: 10px;
+    background-color: var(--clr-dark-grey);
+}
+.profile_stats{
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    font-family: var(--font-3);
+    font-size: 12px;
+    font-weight: bold;
+}
+.profile_stats span{
+    height: 3px;
+    border-radius: 3px;
+}
+.hp{background-color: rgb(51, 150, 153); width: 100px;}
+.hp2{background-color: rgb(173, 42, 42); width: 60px;}
+.hp3{background-color: rgb(224, 255, 47); width: 30px;}
+.hp4{background-color: rgb(62, 62, 165); width: 80px;}
+
+/* NAVIGATION SIDE */
+.nav_group{
+    background-color: var(--clr-dark-grey);
+    padding: 20px;
+    margin-top: 20px
+}
+.nav_group h2 {
+    margin-bottom: 10px;
+    font-size: 25px;
+    font-family: var(--font-1);
+}
+.nav_group ul li a{
+    line-height: 1.6;
+    color: var(--clr-light-grey);
+    font-family: var(--font-3);
+    font-size: 16px;
+    font-weight: bold;
+    opacity: .8;
+}
+.nav_group ul li a:hover{
+    color: var(--clr-red);
+    opacity: 1;
+}
+
+/* ---- CONTENT SECTION ---- */
+.content_section{
+    flex-basis: 100%;
+}
+
+/* CAROUSEL BANNERS */
+
+.banner img{
+    width: 100%;
+    height: 300px;
+    object-fit: cover;
+}
+
+/* GAME NEWS ARTICLES */
+.gamenews_section h2{
+    background-color: var(--clr-dark-grey);
+    text-align: center;
+    font-size: 40px;
+    padding: 10px;
+    margin: 20px 0;
+}
+.gamenews_group{
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.gamenews_article{
+    background-color: var(--clr-dark-grey);
+    padding: 20px;
+    line-height: 1.5;
+    flex: 1 1 300px;
+    position: relative;
+}
+.gamenews_article:hover{
+    transform: scale(1.03);
+    transition: all ease-in-out 200ms;
+    background-color: var(--clr-blue);
+    cursor: pointer;
+}
+.gamenews_article h3{
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    background-color: var(--clr-dark-grey);
+    padding: 10px;
+    font-size: 15px;
+}
+.gamenews_article img{
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+.gamenews_article p{
+    font-family: var(--font-3);
+    padding: 10px 0;
+}
+.gamenews_article button{
+    padding: 10px;
+    font-family: var(--font-2);
+    font-weight: bold;
+    font-size: 16px;
+    background-color: var(--clr-light-grey);
+    height: 40px;
+    cursor: pointer;
+}
+.gamenews_article button:hover {
+    color: var(--clr-light-grey);
+    background-color: black;
+}
