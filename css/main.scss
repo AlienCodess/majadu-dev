@@ -1,0 +1,82 @@
+/* BOOTSTRAP VARIABLES */
+$primary: #0A051C57;
+$secondary: #7672C1;
+$danger: #7672C182;
+$dark: #22184A;
+$light: #CAC8ED;
+
+/* EIGEN CSS/SCCS*/
+/* LABRIT */
+@font-face {
+  font-family: LABRIT;
+  src: url('../font/LABRIT__.ttf');
+}
+
+@font-face {
+  font-family: ENDOR;
+  src: url('../font/ENDOR___.ttf');
+}
+
+@font-face {
+  font-family: ENDORALT;
+  src: url('../font/ENDORALT.ttf');
+}
+
+h1 {
+  font-family: LABRIT, sans-serif;
+}
+
+h2 {
+  font-family: ENDOR, sans-serif;
+  letter-spacing: 3px;
+}
+.news{
+  padding-bottom: 150px;
+}
+#news_title {
+  margin:100px 0 50px 0;
+}
+
+
+#hero_title {
+  padding: 75px 0;
+}
+
+#hero {
+  padding-bottom: 50px;
+}
+
+#hero_btns {
+  padding-top: 50px;
+
+  button{
+    padding: 25px 0;
+  }
+}
+
+.parallax {
+  background-image: url("/img/bg.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+
+}
+
+.parallax-2 {
+  background-image: url("/img/bg.jpg");
+  height: 720px;
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  padding: 50px 0;
+}
+
+/* BOOTSTRAP FRAMEWORK */
+@import "../node_modules/bootstrap/scss/bootstrap";
+
