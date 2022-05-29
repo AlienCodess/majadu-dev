@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    background: black;
+    color: white;
+    font-family: sans-serif;
+}
+
+/** FLEXBOX **/
+.d-flex {
+    display: flex;
+}
+
+.justify-content-between {
+    justify-content: space-between;
+}
+
+.justify-content-center {
+    justify-content: center;
+}
+
+.justify-content-around {
+    justify-content: space-around;
+}
+
+.flex-direction-column {
+    flex-direction: column;
+}
+
+.align-items-center {
+    align-items: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+
+/* GAME */
+body {
+    display: grid;
+    place-items: center;
+
+}
+
+/*#battle {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}*/
+
+.row {
+    display: flex;
+}
+
+.tile {
+    width: 100px;
+    height: 100px;
+    display: flex;
+    outline: 1px solid currentColor;
+    font-size: 2rem;
+}
+
+.player_tile {
+    display: none;
+}
+.enemy_tile {
+    display: none;
+}
+
+.active {
+    display: block;
+}
